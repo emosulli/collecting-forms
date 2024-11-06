@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fantasy Football Registration</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Fantasy Football Registration</h1>
+        
+        <form id="form1" onsubmit="return validateForm(this)">
+            <h2>Form 1</h2>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="teamName">Team Name:</label>
+            <input type="text" id="teamName" name="teamName" required><br><br>
+        </form>
+
+            <div class="form-container">
+                <form id="player-form" action="/submit-selection" method="POST">
+                    <label for="football-player">Choose 3 Favorite Players:</label>
+                    <select multiple="multiple" id="football-player" name="player[]">
+                        <option value="Tom Brady">Tom Brady</option>
+                        <option value="Patrick Mahomes">Patrick Mahomes</option>
+                        <option value="Aaron Donald">Aaron Donald</option>
+                        <option value="DeAndre Hopkins">DeAndre Hopkins</option>
+                        <option value="Derrick Henry">Derrick Henry</option>
+                        <option value="Davante Adams">Davante Adams</option>
+                        <option value="Jalen Ramsey">Jalen Ramsey</option>
+                        <option value="Russell Wilson">Russell Wilson</option>
+                        <option value="Travis Kelce">Travis Kelce</option>
+                        <option value="Tyreek Hill">Tyreek Hill</option>
+                        <option value="Stefon Diggs">Stefon Diggs</option>
+                        <option value="Saquon Barkley">Saquon Barkley</option>
+                        <option value="Juju Smith-Schuster">Juju Smith-Schuster</option>
+                        <option value="Zeke Elliott">Ezekiel Elliott</option>
+                        <option value="Khalil Mack">Khalil Mack</option>
+                    </select>
+                    <div class="error" id="error-message"></div>
+        
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <button type="submit">Submit Form 1</button>
+        </form>
+        </div>
+     <script src="index.js"></script>
+    </body>
+</html>
